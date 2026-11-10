@@ -1,0 +1,37 @@
+<nav class="flex-1 p-4">
+
+  <p class="mb-4 px-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
+    {{ title() }}
+  </p>
+
+  <ul class="space-y-2">
+
+    @for (menuItem of menuItems(); track menuItem.route) {
+
+    <li>
+
+      <a [routerLink]="menuItem.route" routerLinkActive="bg-green-950 text-white"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="flex items-center justify-between rounded-lg px-4 py-3 font-medium text-slate-600 transition-all duration-200 hover:bg-slate-100 hover:text-green-950">
+
+        <div class="flex items-center gap-3">
+
+          @if (menuItem.icon) {
+          <i [class]="menuItem.icon"></i>
+          }
+
+          <span>
+            {{ menuItem.label }}
+          </span>
+
+        </div>
+
+      </a>
+
+    </li>
+
+    }
+
+  </ul>
+
+</nav>

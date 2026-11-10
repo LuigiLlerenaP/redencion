@@ -1,0 +1,36 @@
+<main class="flex h-screen bg-slate-50">
+
+  <!-- Sidebar -->
+  <aside class="flex w-64 flex-col border-r border-slate-200 bg-white">
+
+    <!-- Logo -->
+    <app-logo-nav title="Redenciones" subtitle="Portal de Gestión" />
+
+    <!-- Menú -->
+    <app-nav-menu [menuItems]="menuItems" title='Menú' />
+
+    <!-- Footer -->
+    <app-footer-nav title="Sistema de Redenciones" version="v1.0" />
+
+  </aside>
+
+  <!-- Área Principal -->
+  <div class="flex flex-1 flex-col overflow-hidden">
+
+    <!-- Header -->
+    <app-header-nav />
+
+    <!-- Contenido -->
+    <section class="flex-1 overflow-auto bg-slate-50 p-3">
+
+      <div class="h-full rounded-xl border border-slate-200 bg-white p-6">
+
+        <router-outlet />
+
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
