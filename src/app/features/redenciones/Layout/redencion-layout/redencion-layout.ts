@@ -12,7 +12,11 @@ import { HeaderNav } from '../../../../shared/header-nav/header-nav';
 })
 export default class RedencionLayout {
   protected menuItems: NavMenuItem[] = [
-    { label: 'Gestión', route: '/redenciones/gestion', icon: 'fa-solid fa-list-check' },
+    {
+      label: 'Gestión',
+      route: '/redenciones/gestion',
+      icon: 'fa-solid fa-list-check',
+    },
     {
       label: 'Consulta',
       route: '/redenciones/consulta',
